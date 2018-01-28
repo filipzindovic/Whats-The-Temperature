@@ -6,6 +6,7 @@ const geocode = require("./geocode/geocode");
 const weather = require("./weather");
 
 var app = express();
+var port = process.env.PORT || 3000;
 
 //View engine
 app.set("view engine", "ejs");
@@ -68,5 +69,5 @@ function getCelsius(temperatureResults, tempRequired) {
     
 }
 
-app.listen(3000, function() {
+app.listen(port, function() {
 });
